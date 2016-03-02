@@ -8,12 +8,12 @@ public class MenuScript : MonoBehaviour {
 
 	public Button playButton;
 	public Button quiteButton;
-    public Button loadButton;
+    	public Button loadButton;
 
 	// Use this for initialization
 	void Start () {
 
-        Screen.showCursor = true;
+        	Screen.showCursor = true;
 
 		if (playButton == null || quiteButton == null || loadButton == null)
 		{
@@ -23,7 +23,7 @@ public class MenuScript : MonoBehaviour {
 		
 		playButton.onClick.AddListener(CallPlayButton);
 		quiteButton.onClick.AddListener(CallQuitButton);
-        loadButton.onClick.AddListener(LoadButton);
+        	loadButton.onClick.AddListener(LoadButton);
 	
 	    
 	}
@@ -31,19 +31,18 @@ public class MenuScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
 	}
-    public void CallPlayButton()
+	public void CallPlayButton()
 	{
         
 		Application.LoadLevel ("Level1");
 	}
-    public void LoadButton()
-    {
-        Application.LoadLevel("LoadSaveMenu");
-    }
+    	public void LoadButton()
+    	{
+	        Application.LoadLevel("LoadSaveMenu");
+    	}
 	public void CallQuitButton()
 	{
-        Application.Quit();
+        	Application.Quit();
 	}
 }
