@@ -13,37 +13,36 @@ public class PauseMenuScript : MonoBehaviour {
     private Texture2D image;
     private Texture2D backgroundHoverImage;
     public GUIContent content;
-	// Use this for initialization
+	
+// Use this for initialization
 	void Start () {
-        //Screen.showCursor = true;
-
-        image = (Texture2D)Resources.Load("button");
-        backgroundHoverImage = (Texture2D)Resources.Load("hover");
-        content.image = image;
-        content.image = backgroundHoverImage;
+		//Screen.showCursor = true;
+		image = (Texture2D)Resources.Load("button");
+		backgroundHoverImage = (Texture2D)Resources.Load("hover");
+		content.image = image;
+		content.image = backgroundHoverImage;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Application.isPlaying)
-        {
-            Screen.showCursor = false;
-        }
-      
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            paused = !paused;
-            
-        }
-        if (paused)
-        {
-            Time.timeScale = 0;
-            Screen.showCursor = true;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+		if (Application.isPlaying)
+		{
+	    		Screen.showCursor = false;
+		}
+
+        	if (Input.GetKeyUp(KeyCode.Escape))
+        	{
+            		paused = !paused;
+        	}
+        	if (paused)
+        	{
+            		Time.timeScale = 0;
+            		Screen.showCursor = true;
+        	}
+        	else
+        	{
+            		Time.timeScale = 1;
+        	}
 	}
     void OnGUI()
     {
